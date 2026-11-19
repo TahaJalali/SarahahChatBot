@@ -1,6 +1,6 @@
-# OpenVeil — anonymous Telegram messaging bot
+# SarahahChatBot — anonymous Telegram messaging bot
 
-OpenVeil is the open-source code for **@SarahahChatBot**, an anonymous-messaging bot built for [Telegram Serverless](https://core.telegram.org/bots/serverless) (`tgcloud`). It provides:
+SarahahChatBot is the open-source code for **@SarahahChatBot**, an anonymous-messaging bot built for [Telegram Serverless](https://core.telegram.org/bots/serverless) (`tgcloud`). It provides:
 
 - personal anonymous links such as `https://t.me/SarahahChatBot?start=<random-token>`;
 - stateless, recipient-bound Reply / Block / Report buttons;
@@ -12,10 +12,10 @@ There is no Mini App, HTTP endpoint, or Node.js runtime component.
 
 ## Privacy model and limits
 
-**What OpenVeil does**
+**What SarahahChatBot does**
 
 - It uses `copyMessage`, not forwarding, so the other participant does not get a Telegram forward header or username.
-- Normal anonymous-link and random-chat message contents are not stored in OpenVeil's database.
+- Normal anonymous-link and random-chat message contents are not stored in SarahahChatBot's database.
 - Personal link tokens are random 12-character URL-safe values; they are never derived from Telegram IDs.
 - Reply tokens are AES-256-GCM encrypted with a fresh nonce and bound to the person pressing the button through authenticated associated data. A copied button cannot be used by another account.
 - A block list stores only a truncated keyed HMAC fingerprint of a sender, not their raw ID.
@@ -23,7 +23,7 @@ There is no Mini App, HTTP endpoint, or Node.js runtime component.
 
 **What it does not claim**
 
-OpenVeil is **anonymous to the other participant**, not end-to-end encrypted and not anonymous to Telegram. Telegram transports and hosts bot messages. The bot server necessarily receives updates in order to copy them. Reported messages are forwarded to the administrator chat. As with every bot, people can still screenshot, copy, or report content outside this bot.
+SarahahChatBot is **anonymous to the other participant**, not end-to-end encrypted and not anonymous to Telegram. Telegram transports and hosts bot messages. The bot server necessarily receives updates in order to copy them. Reported messages are forwarded to the administrator chat. As with every bot, people can still screenshot, copy, or report content outside this bot.
 
 The database intentionally has no message table, message mapping table, or durable sender-to-recipient conversation mapping. The only temporary routing values are the user-requested FSM state (`stateData`) while a user is composing an anonymous message or reply.
 

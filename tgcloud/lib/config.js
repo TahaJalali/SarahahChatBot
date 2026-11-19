@@ -1,6 +1,6 @@
 // Bot identity and deployment-specific IDs live here, never scattered through handlers.
 export const BOT_USERNAME = 'SarahahChatBot';
-export const BOT_NAME = 'OpenVeil';
+export const BOT_NAME = 'SarahahChatBot';
 
 // Replace both placeholders with numeric Telegram IDs before deploying.
 export const OWNER_ID = 0;
