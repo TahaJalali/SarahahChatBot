@@ -1,0 +1,13 @@
+{
+  "name": "SarahahChatBot",
+  "private": true,
+  "devDependencies": {
+    "@tgcloud/cli": "^0.2.0"
+  },
+  "scripts": {
+    "deploy": "tgcloud push",
+    "status": "tgcloud status",
+    "run": "tgcloud run",
+    "selftest": "tgcloud run handlers/message '{}' --ctx '{ selftest: true }'"
+  }
+}
